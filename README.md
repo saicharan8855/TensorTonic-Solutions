@@ -80,6 +80,7 @@ Verified machine learning implementations completed on [TensorTonic](https://www
 | Local Response Normalization | Implement AlexNet local response normalization across neighboring channels using the paper's scaling equation. | https://www.tensortonic.com/research/alexnet/alexnet-lrn |
 | Overlapping Max Pooling | Implement AlexNet overlapping max pooling with a 3x3 window and stride two across spatial dimensions. | https://www.tensortonic.com/research/alexnet/alexnet-pooling |
 | ReLU Activation Function | Implement AlexNet's elementwise ReLU activation, preserving positive values while setting negative values to zero. | https://www.tensortonic.com/research/alexnet/alexnet-relu |
+| VGG Conv Block | Implement a VGG convolutional block as sequential channel projections with ReLU activation at every spatial position. | https://www.tensortonic.com/research/vgg/vgg-conv-block |
 
 View my verified ML profile: [TensorTonic profile](https://www.tensortonic.com/profile/saicharan9948644390)
 <!-- tensortonic:end -->
