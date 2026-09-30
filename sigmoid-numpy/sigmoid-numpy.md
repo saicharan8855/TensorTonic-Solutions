@@ -71,11 +71,13 @@ Computing $e^{-x}$ directly can overflow for large negative $x$ (since $e^{-(-10
 A numerically stable implementation handles positive and negative inputs differently:
 
 For $x \geq 0$:
+
 $$
 \sigma(x) = \frac{1}{1 + e^{-x}}
 $$
 
 For $x < 0$:
+
 $$
 \sigma(x) = \frac{e^x}{1 + e^x}
 $$
