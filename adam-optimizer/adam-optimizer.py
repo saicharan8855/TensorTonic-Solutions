@@ -11,21 +11,18 @@ def adam_step(
     beta2: float = 0.999,
     eps: float = 1e-8,
 ) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
-
     param = np.asarray(param)
     grad = np.asarray(grad)
     m = np.asarray(m)
     v = np.asarray(v)
 
-    m_t = beta1 * m + (1 - beta1) * grad
-    v_t = beta2 * v + (1 - beta2) * (grad**2)
-    beta1_power = beta1 ** t
-    beta2_power = beta2 ** t
-    m_cap = m_t / (1 - beta1_power)
-    v_cap = v_t / (1 - beta2_power)
-    new_param = param - lr*m_cap/(np.sqrt(v_cap) + eps)
+    mt = beta1 * m + (1 - beta1)*grad 
+    vt = beta2 * v + (1 - beta2)*(grad*grad)
+    m_cap = mt /  (1 - (beta1)**t)
+    v_cap = vt / (1 - (beta2)**t)
+    teta = param - lr*m_cap/(np.sqrt(v_cap) + eps)
 
-    return new_param, m_t, v_t
+    return teta, mt, vt
     """
     Returns (param_new, m_new, v_new) as NumPy arrays.
     """
